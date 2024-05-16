@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <title>portfolio</title>
+    <script src="https://kit.fontawesome.com/7431f185b3.js" crossorigin="anonymous"></script>
+    <script>
+        /*insert your JavaScript functions here */
+         function swap1() {
+            document.getElementById("mainImg").src="images/project1.png"
+         }
+         function swap2() {
+            document.getElementById("mainImg").src="images/project2.JPG"
+         }   
+            
+         function swap3() {
+            document.getElementById("mainImg").src="images/project3.png"
+         }   
+            
+         function swap4() {
+            document.getElementById("mainImg").src="images/project4.webp"
+         }   
+
+        </script>
+        
+</head>
+<body>
+    <header>
+        <div class="head-container">
+            <nav>   
+                <h1 class="logo">C<span> O</span></h1>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+    <div class="grid-container">       
+        <h1 class="sub-title">My Portfolio</h1>
+        <div class="portfolio" id="portfolio1">
+            <img id="mainImg" src="images/project1.png" alt="">
+            <div class="layer">
+                <h3>Website</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <!--<div class="portfolio" id="portfolio2">
+            <img src="images/project2.jpg" alt="">
+            <div class="layer">
+                <h3>Website</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="portfolio" id="portfolio3">
+            <img src="images/project3.png" alt="">
+            <div class="layer">
+                <h3>Website</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>    
+            <div class="portfolio" id="portfolio5">
+                <img src="images/project1.png" alt="">
+                <div class="layer">
+                    <h3>Website</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio" id="portfolio6">
+                <img src="images/project2.jpg" alt="">
+                <div class="layer">
+                    <h3>Website</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio" id="portfolio7">
+                <img src="images/project3.png" alt="">
+                <div class="layer">
+                    <h3>Website</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio" id="portfolio8">
+                <img src="images/project4.webp" alt="">
+                <div class="layer">
+                    <h3>Website</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio" id="portfolio9">
+                <img src="images/project4.webp" alt="">
+                <div class="layer">
+                    <h3>Website</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio" id="portfolio10">
+                <img src="images/project4.webp" alt="">
+                <div class="layer">
+                    <h3>Website</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>-->
+
+    </div>
+    <p class="buttons">
+        <button id="btn1" onclick="swap1()">Project 1</button>
+        <button id="btn2" onclick="swap2()">Project 2</button>
+        <button id="btn3" onclick="swap3()">Project 3</button>
+        <button id="btn4" onclick="swap4()">Project 4</button>
+    </p>
+
+    <footer>
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Clinton Osuoha</p>
+        <p>Made with <i class="fa-solid fa-heart"></i> by Clinton Osuoha</p>
+    </footer>
+
+    
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+</body>
+</html>

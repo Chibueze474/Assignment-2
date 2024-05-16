@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+    <script src="https://kit.fontawesome.com/7431f185b3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="head-container">
+            <nav>   
+                <h1 class="logo">C<span> O</span></h1>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, I'm <span>Clinton Osuoha</span><br> TUS Graduate</h1>
+            </div>
+        </div>
+    </header>
+    <div class="grid-container">       
+        <h1 class="sub-title">My Portfolio</h1>
+        <div class="portfolio" id="portfolio1">
+            <img src="images/project1.png" alt="">
+            <div class="layer">
+                <h3>Website</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="portfolio" id="portfolio2">
+            <img src="images/project2.jpg" alt="">
+            <div class="layer">
+                <h3>Website</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="portfolio" id="portfolio3">
+            <img src="images/project3.png" alt="">
+            <div class="layer">
+                <h3>Website</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="portfolio" id="portfolio4">
+            <img src="images/project4.webp" alt="">
+            <div class="layer">
+                <h3>Website</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aperiam eaque autem at sapiente commodi.</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="btn-container">
+            <div class="view-btn"><a href="portfolio.html">View More</a></div>
+        </div>
+        <h1 class="sub-title">Modules</h1>
+        <div class="modules" id="modules1">
+            <i class="fa-solid fa-calculator"></i>
+            <h2>Mathematics Methods</h2>
+            <div class="paragraph">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo accusamus, nulla asperiores officiis quis esse quisquam, dicta cupiditate, labore iste recusandae. Eligendi maiores esse eveniet, sed nam at sapiente.</p>
+            </div>
+        </div>
+        <div class="modules" id="modules2">
+            <i class="fa-brands fa-css3"></i>
+            <h2>Responsive Design and Web Dev</h2>
+            <div class="paragraph">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo accusamus, nulla asperiores officiis quis esse quisquam, dicta cupiditate, labore iste recusandae. Eligendi maiores esse eveniet, sed nam at sapiente.</p>
+            </div>
+        </div>
+        <div class="modules" id="modules3">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h2>Structured Programming</h2>
+            <div class="paragraph">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic illo accusamus, nulla asperiores officiis quis esse quisquam, dicta cupiditate, labore iste recusandae. Eligendi maiores esse eveniet, sed nam at sapiente.</p>
+            </div>
+        </div>
+        
+        <div class="btn-container">
+            <div class="view-btn"> <a href="modules.html">View More</a></div>
+        </div>  
+    </div>
+    <footer>
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Clinton Osuoha</p>
+        <p>Made with <i class="fa-solid fa-heart"></i> by Clinton Osuoha</p>
+    </footer>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+</body>
+</html>

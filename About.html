@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/about.css">
+    <title>About me</title>
+    <script src="https://kit.fontawesome.com/7431f185b3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="head-container">
+            <nav>   
+                <h1 class="logo">C<span> O</span></h1>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+    <div class="grid-container">
+        <div class="about" id="about-col-1">
+            <img src="images/me2.jpeg" alt="Clinton O">
+        </div>
+        <div class="about" id="about-col-2">
+            <h1>About Me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sequi obcaecati accusantium reiciendis quod blanditiis consectetur porro autem voluptas quaerat dolor ea quibusdam qui deserunt, veritatis modi eum atque commodi?</p>
+
+            <div class="tab-titles">
+                <p class="tab-link active-link" onclick="openTab('skills')">Skills</p>
+                <p class="tab-link" onclick="openTab('experience')">Experience</p>
+                <p class="tab-link" onclick="openTab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Web Development</span><br> Designing Web/App interfaces</li>
+                    <li><span>App Development</span><br> Building Android/ios apps</li>
+                    <li><span>SQL Expertise</span><br> Managing large databases</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2022 - Current</span><br> Team lead at Three moblile</li>
+                    <li><span>2020 - 2022</span><br> Senior developer at Johnson & Johnson, Vision Care</li>
+                    <li><span>2019 - 2020</span><br> Internship at Dell Technologies</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2018</span><br> TUS Moylish Campus</li>
+                    <li><span>2014</span><br> MBA from NIIT Lagos.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Clinton Osuoha</p>
+        <p>Made with <i class="fa-solid fa-heart"></i> by Clinton Osuoha</p>
+    </footer>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-link");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function openTab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+        <script>
+
+            var sidemenu = document.getElementById("sidemenu");
+    
+            function openmenu() {
+                sidemenu.style.right = "0";
+            }
+    
+            function closemenu() {
+                sidemenu.style.right = "-200px";
+            }
+    
+        </script>
+</body>
+</html>

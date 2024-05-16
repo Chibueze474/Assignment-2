@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Contact Me</title>
+    <script src="https://kit.fontawesome.com/7431f185b3.js" crossorigin="anonymous"></script>
+    <script>
+        function processForm(event) {
+        if (!validateForm()) 
+        event.preventDefault(); 
+    }
+        function isUrl(url) { 
+        const urlPattern = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
+        return urlPattern.test(url); 
+    }
+
+    function validateEmail(emailAddress) {
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; 
+        return emailPattern.test(emailAddress); 
+    }
+
+    function validateForm() {
+        let name = document.getElementById("name").value;
+        let email1 = document.getElementById("email1").value;
+        let email2 = document.getElementById("email2").value;
+        let query = document.getElementById("query").value;
+        let website = document.getElementById("website").value;
+
+        if (name.trim() == "") {
+            document.getElementById("error-name").innerHTML = "*Required field";
+            return false;
+        } 
+
+        if (!isUrl(website)) {
+            document.getElementById("error-website").innerHTML = "*Invalid URL";
+            return false;
+        }
+
+        if (email1.trim() == "") {
+            document.getElementById("error-email1").innerHTML = "*Required field";
+            return false;
+        }else if (!validateEmail(email1)) {
+            document.getElementById("error-email1").innerHTML = "*Invalid email address";
+            return false;
+        }
+
+
+        if (email2.trim() == "") {
+            document.getElementById("error-email2").innerHTML = "*Required field";
+            return false;
+        } else if (email1 != email2) {
+            document.getElementById("error-email2").innerHTML = "*Emails do not match";
+            return false;
+        }
+
+        if (query.trim() == "") {
+            document.getElementById("error-query").innerHTML = "*Required field";
+            return false;
+        } 
+
+        return true;
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="head-container">
+            <nav>   
+                <h1 class="logo">C<span> O</span></h1>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="modules.html">Modules</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+    <div class="grid-container">
+        <div class="popup" id="popup-1">
+            <div class="overlay" id="overlay"></div>
+            <div class="content" id="content">
+            <div class="form-row">
+                <label for="">Enter Captcha</label>
+                <div class="col-md-1">
+                    <input type="text" class="form-control" readonly id="capt" style="font-style: italic;">
+                </div>
+                <div class="col-md-1">
+                    <input type="text" class="form-control" id="textinput">
+                </div>
+            </div>
+            <button onclick="cap()" class="Button">Refresh <i class="fa-solid fa-arrows-rotate"></i></button>
+            <button onclick="validcap()" class="Button">Submit</button>
+        </div>
+        </div>
+      <div class="contact-row1">
+       <!-- action="http://tusprojects.net/rdwd-contact-response.php"-->
+        <form id="detailsForm" action="http://tusprojects.net/rdwd-contact-response.php" method="post">
+            <h1 class="subscribe">Subscribe</h1>
+            <label for="name"></label>
+            <input novalidate name="name" id="name" placeholder="Full Name">
+            <label for="company_name"></label>
+            <input novalidate name="company_name" id="company_name" placeholder="Company Name">
+            <label for="website"></label>
+            <input novalidate name="website" id="website" placeholder="Company Website">
+            <label for="email1"></label>
+            <input novalidate name="email1" id="email1" placeholder="Your Email">
+            <label for="email2"></label>
+            <input novalidate name="email2" id="email2" placeholder="Retype Email">
+            <label for="query"></label>
+            <textarea novalidate name="query" id="query" cols="30" rows="10" placeholder="Comment"></textarea>
+            <input type="submit" value="Submit" id="submit" class="submit-btn">
+        </form>
+      </div>
+      <div class="contact-row2">
+        <h1 class="sub-title">Contact Me</h1><br>
+        <p><i class="fa-solid fa-paper-plane"></i>clint474@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>012345673</p>
+      </div>
+      <div class="social-icons">
+        <h1 class="sub-title">My Socials</h1><br>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    </div>
+
+    <footer>
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Clinton Osuoha</p>
+        <p>Made with <i class="fa-solid fa-heart"></i> by Clinton Osuoha</p>
+    </footer>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+        function cap() {
+            var alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            var a = alpha[Math.floor(Math.random()*71)];
+            var b = alpha[Math.floor(Math.random()*71)];
+            var c = alpha[Math.floor(Math.random()*71)];
+            var d = alpha[Math.floor(Math.random()*71)];
+            var e = alpha[Math.floor(Math.random()*71)];
+            var f = alpha[Math.floor(Math.random()*71)];
+            var final = a+b+c+d+e+f;
+            document.getElementById("capt").value= final;
+        }
+        function validcap() {
+            let stg1 = document.getElementById('capt').value;
+            let stg2 = document.getElementById('textinput').value;
+            if (stg1==stg2 ) {
+                alert("Form is validated Succesfully");
+                document.getElementById("overlay").style.display = "none";
+                document.getElementById("content").style.display = "none";
+                return true;
+            }
+            else{
+                alert("Please enter a valid captcha");
+                return false;
+            }
+        }
+        document.getElementById("detailsForm").addEventListener("submit", processForm);
+    </script>
+</body>
+</html>
